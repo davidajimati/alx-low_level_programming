@@ -4,9 +4,9 @@
 
 int main(void)
 /**
-* main - the entry part of the program
+* main - Entry point
 *
-* return: Should return 0 if thsi program is successful
+* Return: Always 0 (Success)
 */
 {
 	int n;
