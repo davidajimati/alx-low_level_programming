@@ -16,7 +16,7 @@ int main(void)
 		figures = (num + '0');
 		putchar(figures);
 	}
-	for (alpha = 'a' ; alpha <= f ; alpha++);
+	for (alpha = 'a' ; alpha <= 'f' ; alpha++);
 	{
 		putchar(alpha);
 	}
