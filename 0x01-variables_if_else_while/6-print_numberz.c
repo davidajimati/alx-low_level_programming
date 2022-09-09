@@ -14,7 +14,8 @@ int main(void)
 	{
 		number = (code + '0');
 		putchar(number);
-		putchar('\n');
 	}
+
+	putchar('\n');
 	return (0);
 }
