@@ -13,6 +13,7 @@ int main(void)
 	int b1;
 	int c;
 	int c1;
+
 	for (a = 0; a < 10; a++)
 	{
 		a1 = ((a % 10) + '0');
