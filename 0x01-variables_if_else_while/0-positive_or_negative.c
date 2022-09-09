@@ -2,13 +2,15 @@
 #include <time.h>
 #include <stdio.h>
 
-int main(void)
-/*
+/**
 * main - the entry part of the program
 * return: Should return 0 if thsi program is successful
 */
+
+int main(void)
 {
 	int n;
+	
 	srand(time(0));
 
 	n = rand() - RAND_MAX / 2;
