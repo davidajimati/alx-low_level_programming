@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - entry point main(void)
+ *
  * return: Always (0) when successful
  */
 int main(void)
