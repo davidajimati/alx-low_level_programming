@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(char i)
+char main(char i)
 {
 	for (i = 'a'; i <= 'z'; i++)
 		_putchar(i);
