@@ -57,7 +57,7 @@ void times_table(void)
 	while (a < 36) 
 	{
 		l_5 = a + '0';
-		_putchar(int)(l_5);
+		_putchar((int)l_5);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
