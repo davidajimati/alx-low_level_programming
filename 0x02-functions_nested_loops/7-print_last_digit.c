@@ -11,7 +11,7 @@ int print_last_digit(int i)
 {
 	int last;
 
-	last = i % 10;
+	last = (i % 10) * +1;
 	printf("%d", last);
 	fflush(stdout);
 	return ((int)last);
