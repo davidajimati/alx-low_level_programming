@@ -10,11 +10,9 @@
 int print_last_digit(int i)
 {
 	int last;
-	char lastz;
 
-	lastz = i % 10;
-	last = (int)lastz;
+	last = i % 10;
 	printf("%d", last);
 	fflush(stdout);
-	return (lastz);
+	return ((int)last);
 }
