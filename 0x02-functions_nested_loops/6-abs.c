@@ -14,5 +14,4 @@ int _abs(int x)
 
 	result = abs(x);
 	printf("%d\n", result);
-	return (0);
 }
