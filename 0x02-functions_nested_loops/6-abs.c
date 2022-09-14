@@ -8,11 +8,10 @@
  * @x: integer
  * Return: returns 0 when successful
  */
-int _abs(int x)
+int _abs(void)
 {
 	int result;
 
 	result = abs(x);
 	printf("%d\n", result);
-	return(0);
 }
