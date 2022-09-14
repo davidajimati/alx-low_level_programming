@@ -13,6 +13,6 @@ int _abs(int x)
 	int result;
 
 	result = abs(x);
-	printf("Value of abs x is: %d\n", result);
+	printf("%d\n", result);
 	return (0);
 }
