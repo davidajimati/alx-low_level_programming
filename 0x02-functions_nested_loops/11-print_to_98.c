@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <sdlib.h>
+#include <stdlib.h>
 
 /**
  * print_to_98 - Mian function; prints from any number to 98
