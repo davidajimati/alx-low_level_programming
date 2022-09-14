@@ -6,12 +6,12 @@
  * _abs - evaluates the absolute value of an integer
  *
  * @x: integer
- * Return: returns 0 when successful
+ * Return: returns the integer type of x when successful
  */
-int _abs(void)
+int _abs(int x)
 {
-	int result;
-
-	result = abs(x);
-	printf("%d\n", result);
+	if (n <= 0)
+		return (-n);
+	else
+		return (n);
 }
