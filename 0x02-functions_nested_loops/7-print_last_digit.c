@@ -12,7 +12,15 @@ int print_last_digit(int i)
 	int last;
 
 	last = ((i % 10) * (+1));
+	if (last < 0)
+	{
+		last *= -1;
+		printf("%d", last);
+	}
+	else
+	{
 	printf("%d", last);
+	}
 	fflush(stdout);
 	return ((int)last);
 }
