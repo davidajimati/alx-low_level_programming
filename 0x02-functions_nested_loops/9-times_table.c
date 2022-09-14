@@ -20,6 +20,7 @@ void times_table(void)
 		_putchar(' ');
 	}
 	_putchar('\n');
+
 	while (a < 10)
 	{
 		char_a = a + '0';
@@ -30,15 +31,18 @@ void times_table(void)
 		a++;
 	}
 	_putchar('\n');
-	for (i = 0; i <= 18; i += 2)
+
+	while (a < 18)
 	{
-		l_3 = i + '0';
-		_putchar(l_3);
+		l_3 = a + '0';
+		_putchar((int)l_3);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		i += 2;
 	}
 	_putchar('\n');
+
 	for (i = 0; i <= 27; i += 3)
 	{
 		l_4 = i + '0';
@@ -50,9 +54,10 @@ void times_table(void)
 	_putchar('\n');
 
 	for (i = 0; i <= 36; i += 4)
+	while (a < 36) 
 	{
-		l_5 = i + '0';
-		_putchar(l_5);
+		l_5 = a + '0';
+		_putchar(int)(l_5);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
