@@ -20,8 +20,8 @@ i		printf("%d\n", n);
 		{
 			printf("%d, ", n);
 			n--;
+		_putchar('\n');
 		}
-		printf("\n");
 	}
 	else
 	{
@@ -29,8 +29,8 @@ i		printf("%d\n", n);
 		{
 			printf("%d, ", n);
 			n--;
+		_putchar('\n');
 		}
-		printf("\n");
 	}
 }
 
