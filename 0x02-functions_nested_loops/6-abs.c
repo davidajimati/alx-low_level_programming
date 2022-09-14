@@ -8,7 +8,7 @@
  * @x: integer
  * Return: returns the integer type of x when successful
  */
-int _abs(int x)
+int _abs(int n)
 {
 	if (n <= 0)
 		return (-n);
