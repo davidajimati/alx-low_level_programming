@@ -13,7 +13,7 @@ int print_last_digit(int i)
 	char lastz;
 
 	lastz = i % 10;
-	last = lastz;
+	last = (int)lastz;
 	printf("%d", last);
 	fflush(stdout);
 	return (lastz);
