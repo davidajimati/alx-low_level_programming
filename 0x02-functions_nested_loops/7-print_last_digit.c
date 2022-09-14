@@ -13,8 +13,8 @@ int print_last_digit(int i)
 	char lastz;
 
 	last = i % 10;
+	lastz = i % 10;
 	printf("%d", last);
 	fflush(stdout);
-	lastz = (last) + '0';
-	return (last);
+	return (lastz);
 }
