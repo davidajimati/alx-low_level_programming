@@ -1,14 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
  * _abs - evaluates the absolute value of an integer
  *
- * @int - integer
+ * @x: integer
  * Return: returns 0 when successful
  */
-int _abs(int)
+int _abs(int x)
 {
-	int abs(int);
+	int result;
+
+	result = abs(x);
+	printf("Value of abs x is: %d\n", result);
 	return (0);
 }
