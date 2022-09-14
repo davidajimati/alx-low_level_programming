@@ -43,18 +43,18 @@ void times_table(void)
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 27; i += 3)
+	while (a < 27)
 	{
-		l_4 = i + '0';
+		l_4 = a + '0';
 		_putchar(l_4);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		a += 3;
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 36; i += 4)
-	while (a < 36) 
+	while (a < 36)
 	{
 		l_5 = a + '0';
 		_putchar((int)l_5);
@@ -64,53 +64,58 @@ void times_table(void)
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 45; i += 5)
+	while (a < 45)
 	{
-		l_6 = i + '0';
+		l_6 = a + '0';
 		_putchar(l_6);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		a += 5;
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 54; i += 6)
+	while (a < 54)
 	{
-		l_7 = i + '0';
+		l_7 = a + '0';
 		_putchar(l_7);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		a += 6;
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 63; i += 7)
+	while (a < 63)
 	{
-		l_8 = i + '0';
+		l_8 = a + '0';
 		_putchar(l_8);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		a += 7;
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 72; i += 8)
+	while (a < 72)
 	{
-		l_9 = i + '0';
+		l_9 = a + '0';
 		_putchar(l_9);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		a += 8;
 	}
 	_putchar('\n');
 
-	for (i = 0; i <= 81; i += 9)
+	while (a < 81)
 	{
-		l_10 = i + '0';
+		l_10 = a + '0';
 		_putchar(l_10);
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
+		a += 9;
 	}
 	_putchar('\n');
 }
