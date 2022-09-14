@@ -5,7 +5,7 @@
 /**
  * _abs - evaluates the absolute value of an integer
  *
- * @x: integer
+ * @n: integer
  * Return: returns the integer type of x when successful
  */
 int _abs(int n)
