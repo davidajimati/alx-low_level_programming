@@ -1,28 +1,31 @@
 #include "main.h"
 
 /**
- * times_table -  funtion that prints the time table of number between 0 and 9
- *
- * Return: It's a void function here.No return
- */
+* times_table - Function that prints the 9 times table
+*
+* Return: void
+*/
 void times_table(void)
 {
-	int number, multiple, product;
+	int num, mult, prod;
 
-	for (number = 0; number <= 9; number++)
+	for (num = 0; num <= 9; num++)
 	{
 		_putchar('0');
-		for (multiple = 0; multiple <= 9; multiple++)
+
+		for (mult = 1; mult <= 9; mult++)
 		{
 			_putchar(',');
 			_putchar(' ');
-			product = number * product;
-			if (product <= 9)
+
+			prod = num * mult;
+
+			if (prod <= 9)
 				_putchar(' ');
 			else
-				_putchar((product / 10) + '0');
+				_putchar((prod / 10) + '0');
 
-			_putchar((product % 10) + '0');
+			_putchar((prod % 10) + '0');
 		}
 		_putchar('\n');
 	}
