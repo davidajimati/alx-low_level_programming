@@ -14,5 +14,6 @@ int print_last_digit(int i)
 	last = i % 10;
 	printf("%d", last);
 	fflush(stdout);
-	return (('\r') last);
+	printf("\r");
+	return (last);
 }
