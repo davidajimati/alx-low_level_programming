@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Fizz-Buzz function
@@ -15,7 +16,7 @@ int main(int i)
 
 	for (i = 1; i < 100; 1++)
 	{
-		if ((i % 3 == 0) && (i % 5 ==0))
+		if ((i % 3 == 0) && (i % 5 == 0))
 		{
 			printf("FizzBuzz");
 		}
