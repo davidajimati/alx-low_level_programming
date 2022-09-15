@@ -9,10 +9,8 @@
  */
 int _isupper(int c)
 {
-	char chr;
 	
-	c = isupper(chr);
-	if (c == 0)
+	if (isupper(c) == 0)
 	{
 		return (0);
 	}
