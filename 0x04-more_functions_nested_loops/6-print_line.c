@@ -4,6 +4,7 @@
 /**
  * print_line - main function; prints underscores
  *
+ * @n: integer that determines line
  * Return: Void
  */
 void print_line(int n)
