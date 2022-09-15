@@ -11,7 +11,7 @@ void print_diagonal(int n)
 {
 	int i;
 	char chr = ' ';
-	char slash = '\';
+	char slash = '92';
 
 	for (i = 1; i <= n; i++)
 	{
