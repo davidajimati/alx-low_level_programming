@@ -8,13 +8,13 @@
  */
 void more_numbers(void)
 {
-	int i, a;
+	int a, i;
 
 	for (a = 0; a < 10; a++)
 	{
 		for (i = 0; i <= 14; i++)
 		{
-			if (i >= 10)
+			if (i > 9)
 			{
 				_putchar(i / 10) + '0';
 			}
