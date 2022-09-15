@@ -4,6 +4,7 @@
 /**
  * print_most_numbers - main function
  *
+ * @void: void function
  * Return: Void in this function
  */
 void print_most_numbers(void)
