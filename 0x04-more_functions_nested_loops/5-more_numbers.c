@@ -1,11 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * more_numbers - prints from 0 to 14
- *
- * Return: Always 0
- */
+* more_numbers - Print 0 to 14 ten times
+*
+* Return: void
+*/
 
 void more_numbers(void)
 {
@@ -17,10 +16,12 @@ void more_numbers(void)
 		{
 			if (num > 9)
 			{
-				_putchar(num / 10) + '0';
+				_putchar((num / 10) + '0');
 			}
-			_putchar(num % 10) + '0';
+
+			_putchar((num % 10) + '0');
 		}
+
 		_putchar('\n');
 	}
 }
