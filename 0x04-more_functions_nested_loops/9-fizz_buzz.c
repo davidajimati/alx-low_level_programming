@@ -26,6 +26,6 @@ int main(void)
 		for (a = 0; a < 99; a++)
 			printf("%c", space);
 	}
-	printf("%c", space);
+	printf("\n");
 	return (0);
 }
