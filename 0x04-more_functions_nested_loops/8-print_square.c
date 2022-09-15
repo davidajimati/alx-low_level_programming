@@ -11,7 +11,7 @@ void print_square(int size)
 {
 	int x, y;
 
-	if (n > 0)
+	if (size > 0)
 	{
 		for (x = 0; x < size; x++)
 		{
