@@ -9,6 +9,7 @@
 void print_most_numbers(void)
 {
 	int i;
+	char ans;
 
 	for (i = 0; i <= 9; i++)
 	{
