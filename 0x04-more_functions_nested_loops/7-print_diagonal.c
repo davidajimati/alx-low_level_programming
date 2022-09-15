@@ -9,9 +9,7 @@
  */
 void print_diagonal(int n)
 {
-	int i;
-	char chr = ' ';
-	char slash = '92';
+	int i, x;
 
 	if (n <= 0)
 	{
@@ -21,12 +19,11 @@ void print_diagonal(int n)
 	{
 		for (i = 1; i <= n; i++)
 		{
-			while (i > 1)
+			for (x = 1; x < i; x++)
 			{
-				_putchar(chr);
-				i--;
+				_putchar(' ');
 			}
-			_putchar(slash);
+			_putchar(92);
 		}
 		_putchar('\n');
 	}
