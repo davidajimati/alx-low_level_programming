@@ -13,13 +13,13 @@ void print_diagonal(int n)
 	char chr = ' ';
 	char slash = '92';
 
-	for (i = 1; i <= n; i++)
+	if (n <= 0)
 	{
-		if (n <= 0)
-		{
-			_putchar('\n');
-		}
-		else
+		_putchar('\n');
+	}
+	else
+	{
+		for (i = 1; i <= n; i++)
 		{
 			while (i > 1)
 			{
@@ -28,6 +28,6 @@ void print_diagonal(int n)
 			}
 			_putchar(slash);
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
