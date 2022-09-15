@@ -11,7 +11,6 @@
 int main(void)
 {
 	int i, a;
-	char space = ' ';
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -23,8 +22,8 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", i);
-		for (a = 0; a < 99; a++)
-			printf("%c", space);
+		if (i != 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
