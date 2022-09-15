@@ -14,8 +14,12 @@ int _isupper(int c)
 	{
 		return (0);
 	}
-	else
+	else if (isupper(c) > 0)
 	{
 		return (1);
+	}
+	else
+	{
+		return (0)
 	}
 }
