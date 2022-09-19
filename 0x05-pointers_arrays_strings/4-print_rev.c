@@ -7,16 +7,14 @@
  * @s: string variable
  * Return: defined in main function
  */
-
 void print_rev(char *s)
 {
 	char i;
 
 	i = '\0';
-	while (i > *s)
+	for (;i > *s; --i)
 	{
 		_putchar(s);
-		i--;
 	}
 	_putchar('\n');
 }
