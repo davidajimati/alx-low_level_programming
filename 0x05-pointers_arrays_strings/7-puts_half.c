@@ -31,7 +31,7 @@ void puts_half(char *str)
 		int halv = (cot - 1) / 2;
 
 		for (halv += 1; halv <= cot; halv++)
-			_putchar(str[half]);
+			_putchar(str[halv]);
 	}
 
 	_putchar('\n');
