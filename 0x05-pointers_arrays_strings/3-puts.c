@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-#include <unistd.h>
 
 /**
  * _puts - prints a string followed by a new line
