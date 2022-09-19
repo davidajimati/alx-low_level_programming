@@ -4,7 +4,7 @@
 /**
  * reset_to_98 - changes the value of a pointer to 98
  *
- * @*n: pointer to be changed
+ * @n: pointer to be changed
  * Return: Always 0
  */
 
