@@ -20,6 +20,7 @@ void rev_string(char *s)
 	{
 		cot--;
 		rev = s[x];
-		s[i] = s[cot];
-		s[cot] = reverse;
+		s[x] = s[cot];
+		s[cot] = rev;
 	}
+}
