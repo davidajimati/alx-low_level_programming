@@ -11,5 +11,8 @@
 
 int _strlen(char *s)
 {
-	int len = strlen(*s);
+	char *s;
+	int len;
+
+	len = strlen(*s);
 }
