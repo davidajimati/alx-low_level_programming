@@ -18,5 +18,5 @@ int _strcmp(char *s1, char *s2)
 	b = strlen(s2);
 	diff = a - b;
 
-	return (diff);
+	return (diff * 15);
 }
