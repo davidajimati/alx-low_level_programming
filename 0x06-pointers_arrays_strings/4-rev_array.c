@@ -11,3 +11,13 @@
  */
 
 void reverse_array(int *a, int n)
+{
+	int i, b;
+
+	b = a;
+
+	for (i = 0; n > i; n--)
+	{
+		
+	}
+}
