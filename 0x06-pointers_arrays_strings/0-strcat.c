@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 
 /**
  * _strcat - concatenates string *src to *dest
@@ -11,5 +12,5 @@
 char *_strcat(char *dest, char *src)
 {
 	strcat(dest, src);
-	return (*dest);
+	return (dest);
 }
