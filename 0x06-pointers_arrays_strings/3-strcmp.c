@@ -12,17 +12,11 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int a;
+	int diff, a, b;
 
-	a = strcmp(s1, s2);
-	if (a < 0)
-	{
-		return (-15);
-	}
-	else if (a > 0)
-	{
-		return (15);
-	}
-	else
-		return (0);
+	a = strlen(s1);
+	b = strlen(s2);
+	diff = a - b;
+
+	return (diff);
 }
