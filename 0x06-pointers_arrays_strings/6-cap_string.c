@@ -1,30 +1,44 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * *cap_string - Chages lowercase to uppercase
- *
- * @s: string variable
- * Return: variable c
+ * *cap_string - changes lower to uppercase
+ * @c: char variable
+ * Return: c
  */
 
-char *cap_string(char *s)
+char *cap_string(char *c)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (c[0] >= 97 && c[0] <= 122)
+		c[0] -= 32;
+
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (s[i] >= 97 && s[i] <= 122)
+		if (c[i] == 32 || c[i]  == 9 || c[i] == 10 || c[i] == 44 || c[i] == 59)
 		{
-			if (s[i] == 44 || s[i] == 59 || s[i] == 46 || s[i] == 33)
+			if (c[i + 1] >= 97 && c[i + 1] <= 122)
 			{
-				s[i + 1] -= 32;
+				c[i + 1] -= 32;
 			}
 		}
-		else if (s[i] == 63 || s[i] == 34 || s[i] == 40 || s[i] == 41 || s[i] == 123 || s[i] == 125)
+
+		if (c[i] == 46 || c[i] == 33 || c[i] == 63 || c[i] == 34 || c[i] == 40)
 		{
-			s[i + 1] -= 32;
+			if (c[i + 1] >= 97 && c[i + 1] <= 122)
+			{
+				c[i + 1] -= 32;
+			}
+		}
+
+		if (c[i] == 41 || c[i] == 123 || c[i] == 124)
+		{
+			if (c[i + 1] >= 97 && c[i + 1] <= 122)
+			{
+				c[i + 1] -= 32;
+			}
 		}
 	}
-	return (s);
+
+	return (c);
 }
