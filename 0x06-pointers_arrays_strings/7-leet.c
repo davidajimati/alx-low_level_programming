@@ -1,28 +1,27 @@
 #include "main.h"
 
 /**
-* leet - Encodes a string into 1337
-* @s: String
-*
-* Return: encoded string
-*/
+ * *leet - encodes a string into a leet
+ *
+ * @c: character to be swapped
+ * Return: c
+ */
 
-char *leet(char *s)
+char *leet(char *c)
 {
-	int i, j;
-	char sub[] = "AEOTL";
-	char rep[] = {52, 51, 48, 55, 49};
+	int i, a;
+	char arr[] = "AEOTL";
+	int swap[] = {4, 3, 0, 7, 1};
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; sub[j] != '\0'; j++)
+		for (a = 0; arr[a] != '\0'; a++)
 		{
-			if (s[i] == sub[j] || s[i] == (sub[j] + 32))
+			if (c[i] == arr[a] || c[i] == arr[a] + 32)
 			{
-				s[i] = rep[j];
+				c[i] = swap[a];
 			}
 		}
 	}
-
-	return (s);
+	return (c);
 }
