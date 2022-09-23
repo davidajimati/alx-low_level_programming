@@ -17,7 +17,7 @@ char *leet(char *c)
 	{
 		for (b = 0; alt[b] != '\0'; b++)
 		{
-			if (c[a] == alt[b] || c[a] == alt[b] + 32)
+			if ((c[a] == alt[b]) || (c[a] == alt[b] + 32))
 			{
 				c[a] = nat[b];
 			}
