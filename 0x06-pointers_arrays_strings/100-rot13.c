@@ -11,14 +11,14 @@
 char *rot13(char *c)
 {
 	int i, j;
-	char real[] = "abcdefghijklm";
-	char alt[] = "nopqrstuvwxyz";
+	char real[] = "abcdefghijklmABCDEFGHIJKLM";
+	char alt[] = "nopqrstuvwxyzNOPQRSTUVWXYZ";
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		for (j = 0; real[j] != '\0'; j++)
 		{
-			if (c[i] == real[j] || c[i] == (real[j] - 32))
+			if (c[i] == real[j])
 			{
 				c[i] = alt[j];
 			}
