@@ -11,21 +11,17 @@
 char *rot13(char *c)
 {
 	int i, j;
-	char real[] = "abcdefghijklmABCDEFGHIJKLM";
-	char alt[] = "nopqrstuvwxyzNOPQRSTUVWXYZ";
+	char real[] = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char alt[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	j = 0;
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		while (real[j] != '\0')
-		{
+		while (c[i] != '\0' && real[j] != '\0')
 			j++;
-		}
 		if (c[i] == real[j])
-		{
 			c[i] = alt[j];
-		}
 	}
 	return (c);
 }
