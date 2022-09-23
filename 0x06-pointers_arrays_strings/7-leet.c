@@ -1,39 +1,27 @@
 #include "main.h"
 
 /**
- * *leet - encodes a string
+ * *leet - encodes strings
  * @c: string variable
  * Return: c
  */
 
 char *leet(char *c)
 {
-	int i;
+	int a, b;
 
-	for (i = 0; c[i] != '\0'; i++)
+	char alt[] = "AEOTL";
+	char nat[] = {52, 51, 48, 55, 49};
+
+	for (a = 0; c[a] != '\0'; a++)
 	{
-		if (c[i] == 'a' || c[i] == 'A')
+		for (b = 0; alt[b] != '\0'; b++)
 		{
-			c[i] = '4';
+			if (c[a] == alt[b] || c[a] == alt[b] + 32)
+			{
+				c[a] = nat[b];
+			}
 		}
-		else if (c[i] == 'e' || c[i] == 'E')
-		{
-			c[i] = '3';
-		}
-		else if (c[i] == 'o' || c[i] == 'O')
-		{
-			c[i] = '0';
-		}
-		else if (c[i] == 't' || c[i] == 'T')
-		{
-			c[i] = '7';
-		}
-		else if (c[i] == 'l' || c[i] == 'L')
-		{
-			c[i] = '1';
-		}
-		else
-			break;
 	}
-	return (c);
+	return (0);
 }
