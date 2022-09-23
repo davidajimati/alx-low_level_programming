@@ -1,27 +1,28 @@
 #include "main.h"
 
 /**
- * *leet - encodes strings
- * @c: string variable
- * Return: c
- */
+* leet - Encodes a string into 1337
+* @s: String
+*
+* Return: encoded string
+*/
 
-char *leet(char *c)
+char *leet(char *s)
 {
-	int a, b;
+	int i, j;
+	char sub[] = "AEOTL";
+	char rep[] = {52, 51, 48, 55, 49};
 
-	char alt[] = "AEOTL";
-	char nat[] = {52, 51, 48, 55, 49};
-
-	for (a = 0; c[a] != '\0'; a++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (b = 0; alt[b] != '\0'; b++)
+		for (j = 0; sub[j] != '\0'; j++)
 		{
-			if ((c[a] == alt[b]) || (c[a] == alt[b] + 32))
+			if (s[i] == sub[j] || s[i] == (sub[j] + 32))
 			{
-				c[a] = nat[b];
+				s[i] = rep[j];
 			}
 		}
 	}
-	return (0);
+
+	return (s);
 }
