@@ -14,14 +14,15 @@ char *rot13(char *c)
 	char real[] = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char alt[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	j = 0;
+	i = 0;
 
-	for (i = 0; c[i] != '\0'; i++)
+	for (j = 0; c[j] != '\0'; j++)
 	{
-		while (c[i] != '\0' && real[j] != '\0')
-			j++;
-		if (c[i] == real[j])
-			c[i] = alt[j];
+		while (real[i] != '\0')
+			i++;
+
+		if (c[j] == real[i])
+			c[j] = alt[i];
 	}
 	return (c);
 }
