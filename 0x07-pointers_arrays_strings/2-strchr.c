@@ -1,12 +1,14 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * *_strchr - Locates a character in a string and allocates a pointer
- *
- * @s: string to be examined
- * @c: character to be searched for
- * Return: Pointer to the first occurence of c
- */
+* _strchr - locates a character in a string
+* @s: String
+* @c: Character
+*
+* Return: a pointer to the first occurance of the character
+*/
+
 char *_strchr(char *s, char c)
 {
 	while (*s)
@@ -22,4 +24,3 @@ char *_strchr(char *s, char c)
 
 	return (NULL);
 }
-
