@@ -20,6 +20,8 @@ char *_strchr(char *s, char c)
 		point = &(s[i]);
 		return (point);
 		}
+		if (c == '\0')
+		return (s);
 	}
 	return ('\0');
 }
