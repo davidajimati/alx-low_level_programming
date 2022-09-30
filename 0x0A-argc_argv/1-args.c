@@ -3,6 +3,7 @@
 /**
 * main - prints the number of command line arguments
 * @argc: argument count
+* @argv: argument vector
 * Return: Always 0
 */
 
