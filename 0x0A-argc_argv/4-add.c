@@ -21,16 +21,15 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if(!isdigit(*(argv + i)))
+		for (j = 1; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < 47 || argv[i][j] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-	}
-	
-	for (j = 1; j < argc; j++)
-	{
-		sum += atoi(*(argv + i));
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
