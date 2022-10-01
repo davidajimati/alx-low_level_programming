@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	
 	for (i = 0; i < argc; i++)
 	{
 		detect = check(argv[i]);
@@ -32,9 +31,8 @@ int main(int argc, char *argv[])
 	if (detect == 1)
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
-	
 	else
 	{
 		for (j = 1; j < argc; j++)
@@ -48,7 +46,7 @@ int main(int argc, char *argv[])
 
 /**
 * check - checks if a variable a digit
-* @num: variable
+* @s: string
 * Return: 0 when succesful, 1 when false
 */
 
