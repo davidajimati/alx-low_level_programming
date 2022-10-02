@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 /**
 * decider - decides the number of coins to give as change
 * @argv: argument vector to be considered
+* @argc: Argument count. Not used in the function
 * Return: Count
 */
 
@@ -45,29 +46,17 @@ void decider(int argc, char *argv[])
 
 	(void)argc;
 
-	if (atoi(argv[1]) >= 25)
-	{
-		count = atoi(argv[1]) / 25;
-		rem = atoi(argv[1]) % 25;
-	}
+	count = atoi(argv[1]) / 25;
+	rem = atoi(argv[1]) % 25;
 
-	if (rem >= 10)
-	{
 	count += rem / 10;
 	rrem = rem % 10;
-	}
 
-	if (rrem >= 5)
-	{
 	count += rrem / 5;
 	rrrem = rrem % 5;
-	}
 
-	if (rrrem >= 2)
-	{
 	count += rrrem / 2;
 	rrrrem = rrrem % 2;
-	}
 
 	if (rrrrem >= 1)
 	{
