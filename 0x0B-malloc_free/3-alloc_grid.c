@@ -3,6 +3,10 @@
 
 /**
 * alloc_grid -  returns pointer ti a 2 dimensional array of integers
+*
+* @width: of array
+* @length: of array
+* Return: pointer to the new array
 */
 
 int **alloc_grid(int width, int height)
@@ -15,10 +19,13 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	arr = (int **)malloc(sizeof(int) * (width + height));
+	arr = (int **)malloc(sizeof(int) * (width * height));
 
 	if (arr == NULL)
+	{
+		free(arr);
 		return (NULL);
+	}
 
 	for (i = 0; i < width; i++)
 	{
