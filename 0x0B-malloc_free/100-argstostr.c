@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	str = malloc(sizeof(av) * ac);
+	str = malloc(sizeof(**av) * ac);
 
 	if (str == NULL)
 		return (NULL);
@@ -33,4 +33,5 @@ char *argstostr(int ac, char **av)
 		}
 	}
 	return (str);
+	free(str);
 }
