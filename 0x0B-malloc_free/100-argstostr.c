@@ -14,6 +14,7 @@ char *argstostr(int ac, char **av)
 	char *str;
 	int i, j;
 
+	(void)j;
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
@@ -26,9 +27,9 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[j] != '\0'; j++)
+		/* for (j = 0; *av[j] != '\0'; j++) */
 		{
-			str[i][j] = *av[i][j]
+			str[i] = *av[i];
 		}
 	}
 	return (str);
