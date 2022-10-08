@@ -29,11 +29,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		b++;
 
 	if (n >= b)
-	{
-		ptr = malloc(sizeof(char) * ( a + b + 1));
-	}
-	else
-		ptr = malloc(sizeof(char) * (a + n + 1));
+		n = b;
+
+	ptr = malloc(sizeof(char) * (a + n) + 1);
 
 	if (ptr == NULL)
 		return (NULL);
