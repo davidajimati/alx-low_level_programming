@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* malloc_checked - funcrion that allocates memory unsing malloc
+* malloc_checked - function that allocates memory unsing malloc
 *
 * @b: memory to be assigned
 * Return: Nothing
@@ -12,8 +12,10 @@ void *malloc_checked(unsigned int b)
 {
 	int *al;
 
-	al = malloc(sizeof(b) + 1);
+	al = malloc(b);
 
 	if (al == NULL)
-		return (98);
+		return (NULL);
+	else
+		return (al);
 }
