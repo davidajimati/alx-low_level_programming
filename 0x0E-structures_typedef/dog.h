@@ -1,8 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef DOG_H
+#define DOG_H
 
 /**
- * dog -  strict containing dog data
+ * struct dog -  strict containing dog data
+ * @name: dog name
+ * @age: dog age
+ * @owner: dog owner
  */
 
 struct dog
@@ -11,3 +14,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif /* DOG_H */
