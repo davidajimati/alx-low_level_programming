@@ -12,8 +12,9 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
-	int j;
+	int i;
+	int confam;
+	int same = -1;
 
 	if (size <= 0)
 		return (-1);
@@ -21,13 +22,14 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (array == NULL || cmp == NULL)
 		return (0);
 
-	for (i = 0; array[i] != '\0'; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size; j++)
+		confam = cmp(array[i]);
+		if (confam != 0)
 		{
-			if (array[i] == (*cmp))
-				return (i);
+			same = i;
+			return (same);
 		}
 	}
-	return (-1);
+	return (same);
 }
