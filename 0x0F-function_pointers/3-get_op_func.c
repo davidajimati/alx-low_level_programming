@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <3-calc.h>
+#include "3-calc.h"
 
 /**
  * get_op_func - gets the operation function from user
