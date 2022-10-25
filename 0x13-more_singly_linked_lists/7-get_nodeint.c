@@ -5,7 +5,7 @@
  *
  * @head: pointer
  * @index: position if the node
- * @listint_t: head->n
+ * Return: nth node
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
