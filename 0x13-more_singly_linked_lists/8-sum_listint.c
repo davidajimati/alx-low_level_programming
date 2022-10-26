@@ -4,7 +4,7 @@
  * sum_listint - returns the sum of all data(n) of  a list
  *
  * @head: pointer
- * @Return: sum of all the data in the nodes
+ * Return: sum of all the data in the nodes
  */
 
 int sum_listint(listint_t *head)
