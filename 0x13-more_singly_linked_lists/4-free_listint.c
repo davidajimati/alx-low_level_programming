@@ -9,8 +9,13 @@
 
 void free_listint(listint_t *head)
 {
-	while (head != NULL)
+	listint_t *temp;
+
+	temp = head;
+
+	while ((temp = head) != NULL)
 	{
-		free(head->next);
+		head = head->next;
+		free(temp);
 	}
 }
