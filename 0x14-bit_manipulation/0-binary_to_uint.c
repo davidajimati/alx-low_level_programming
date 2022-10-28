@@ -31,28 +31,26 @@ unsigned int power(unsigned int base, unsigned int exponent)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal, i, rem;
-	char bn;
+	unsigned int decimal, i, rem, value;
 
-	bn = (*b);
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[i] != '0' || b[i] != '1')
+		if (b[i] == '0' || b[i] == '1')
 		{
-			return (0);
+			continue;
 		}
 		else
-			continue;
+			return (0);
 	}
 
-	bn = atoi(b);
+	value  = atoi(b);
 
-	while (bn != 0)
+	while (value != 0)
 	{
-		rem = bn % 10;
-		bn = bn / 10;
+		rem = value % 10;
+		value = value / 10;
 		decimal += rem * power(2, i);
 		i++;
 	}
 	return (decimal);
-}
+
