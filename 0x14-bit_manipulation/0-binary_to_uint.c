@@ -10,13 +10,14 @@
  * Return: the exponent of the base
  */
 
-unsigned int power(base, exponent)
+unsigned int power(unsigned int base, unsigned int exponent)
 {
 	unsigned int result = 1;
 
-	for (exponent; exponent > 0; exponent--)
+	while (exponent > 0)
 	{
 		result *= base;
+		exponent--;
 	}
 	return (result);
 }
