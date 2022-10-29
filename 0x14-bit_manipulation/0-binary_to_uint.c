@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * power - finds the exponent of the base (raise to power)
@@ -31,7 +31,7 @@ unsigned int power(unsigned int base, unsigned int exponent)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal, i, rem, value;
+	unsigned int decimal= 0, i = 0, rem, value;
 
 	for (i = 0; b[i] != '\0'; i++)
 	{
@@ -43,14 +43,15 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
-	value  = atoi(b);
+	value = atoi(b);
 
-	while (value != 0)
+	while (value > 0)
 	{
 		rem = value % 10;
-		value = value / 10;
-		decimal += rem * power(2, i);
-		i++;
+		value /= 10;
+		if (rem == 1)
+			decimal = decimal + (rem * power(2, i));
+		++i;
 	}
 	return (decimal);
-
+}
