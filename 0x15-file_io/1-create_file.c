@@ -16,8 +16,11 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd;
 
-	if (filename == NULL)
+	if (filename == NULL || !filename)
 		return (-1);
+
+	if (!text_content)
+		text_content = "";
 
 	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
@@ -26,5 +29,8 @@ int create_file(const char *filename, char *text_content)
 		write(fd, text_content, sizeof(text_content));
 		return (1);
 	}
-	return (-1);
+	else
+		return (-1);
+	clode(fd);
+	return (1);
 }
