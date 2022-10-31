@@ -14,22 +14,23 @@
 
 size_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, i;
+	int fd;
 	size_t res;
-	char buff[sizeof(filename)];
+/*	char buff[sizeof(filename)]; */
 
 	if (filename == NULL)
 		return (0);
 
-	for (i = 0; filename[i] != '\0'; i++)
+/*	for (i = 0; filename[i] != '\0'; i++)
 		buff[i] = filename[i];
+	buff[i+1] = '\0'; */
 
 	fd = open(filename, letters);
 
 	if (fd == -1)
 		return (0);
 
-	res = read(fd, buff, sizeof(filename));
+	res = read(fd, filename, sizeof(filename));
 
 	return (res);
 }
