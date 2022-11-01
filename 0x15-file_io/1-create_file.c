@@ -1,36 +1,39 @@
 #include "main.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 
 /**
- * create_file - craetes a file
+ * create_file - program creates a file
+ * @filename: filename
+ * @text_content: content writed in the file
  *
- * @filename: name of new file
- * @text_content: content of filename
- * Return: 1 on success and -1 on failure
+ * Return: 1 if it success, -1 if it fails
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
+	int fdir;
+	int n_letters;
+	int rwr;
 
-	if (filename == NULL || !filename)
+	if (!filename)
+		return (-1);
+
+	fdir = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
+	if (fdir == -1)
 		return (-1);
 
 	if (!text_content)
 		text_content = "";
 
-	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
+	for (n_letters = 0; text_content[n_letters]; n_letters++)
+		;
 
-	if (fd != -1)
-	{
-		write(fd, text_content, sizeof(text_content));
-		return (1);
-	}
-	else
+	rwr = write(fdir, text_content, n_letters);
+
+	if (rwr == -1)
 		return (-1);
-	close(fd);
+
+	close(fdir);
+
 	return (1);
 }
