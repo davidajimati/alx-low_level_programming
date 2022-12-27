@@ -5,7 +5,7 @@
  *
  * @h: head pointer
  * Return: total count of nodes
-*/
+ */
 
 size_t print_dlistint(const dlistint_t *h)
 {
