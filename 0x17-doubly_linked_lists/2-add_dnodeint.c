@@ -34,4 +34,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		trav = trav->next;
 		count++;
 	}
+	return (new_node);
 }
