@@ -1,0 +1,22 @@
+all: build
+
+CC = gcc
+SRC = main.c school.c
+OBJ = ${SRC:.c=.o}
+NAME = school
+# RM =
+
+build:
+	${CC} ${OBJ} -o ${NAME}
+
+clean:
+	rm -f *~ ${NAME}
+
+oclean:
+	rm -f *.o
+
+fclean:
+	rm -r *~ ${NAME} *.o
+
+re:
+	${CC} ${OBJ} -o ${NAME} -f
