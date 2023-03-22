@@ -1,8 +1,7 @@
-all: useful
 CC = gcc
 SRC = main.c school.c
 OBJ = *.o
 NAME = school
 
-useful: ${SRC} ${OBJ}
-	${CC} ${OBJ} ${SRC} -o ${NAME}
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
