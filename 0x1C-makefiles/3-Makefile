@@ -4,19 +4,19 @@ CC = gcc
 SRC = main.c school.c
 OBJ = ${SRC:.c=.o}
 NAME = school
-# RM =
+RM = rm -f
 
-build:
+${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 clean:
-	rm -f *~ ${NAME}
+	${RM} *~ ${NAME}
 
 oclean:
-	rm -f *.o
+	${RM} ${OBJ}
 
 fclean:
-	rm -r *~ ${NAME} *.o
+	${RM} *~ ${NAME} ${OBJ}
 
-re:
-	${CC} ${OBJ} -o ${NAME} -f
+%.c: %.o
+	${CC} -c ${OBJ} -o ${NAME}
