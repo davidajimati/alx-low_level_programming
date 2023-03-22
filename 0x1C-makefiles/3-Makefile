@@ -8,7 +8,7 @@ all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 %.o: %.c
-	$(CC) $^ -o $@
+	$(CC) -c $^ -o $@
 
 clean:
 	${RM} *~ ${NAME}
@@ -16,6 +16,6 @@ clean:
 oclean:
 	${RM} ${OBJ}
 
-fclean: ${RM} *~ ${NAME} ${OBJ}
+fclean: clean oclean
 
 re: fclean all
