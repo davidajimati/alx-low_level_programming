@@ -1,5 +1,5 @@
-all: school
+all: compile
 CC = gcc
 SRC = *.c
-school: ${SRC}
+compile: ${SRC}
 	${CC} ${SRC} -o school
