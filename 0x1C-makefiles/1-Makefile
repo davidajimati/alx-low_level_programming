@@ -1,5 +1,4 @@
 all: school
-
 CC = gcc
 SRC = *.c
 school: ${SRC}
