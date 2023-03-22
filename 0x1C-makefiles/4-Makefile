@@ -6,10 +6,10 @@ RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: ${OBJ}
-	${CC} ${OBJ} ${CFLAGS} -c -o ${NAME}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
 
 %.o: %.c
-	$(CC) ${CFLAGS} $^ -o $@
+	$(CC) ${CFLAGS} $^ -c -o $@
 
 clean:
 	${RM} *~ ${NAME}
