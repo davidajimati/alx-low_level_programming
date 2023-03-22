@@ -1,5 +1,5 @@
 all: compile
 CC = gcc
-SRC = *.c
+SRC = main.c school.c
 compile: ${SRC}
 	${CC} ${SRC} -o school
