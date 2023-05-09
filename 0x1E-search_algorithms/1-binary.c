@@ -8,7 +8,7 @@ int search_engine(int *array, size_t size, int value, size_t left, size_t right)
  * @value: values to search for
  * @size: size of array
  * Return: index of value or -1 if array is NULL or value is absent
-*/
+ */
 
 int binary_search(int *array, size_t size, int value)
 {
@@ -24,9 +24,22 @@ int binary_search(int *array, size_t size, int value)
 
 int search_engine(int *array, size_t size, int value, size_t left, size_t right)
 {
-	size_t lnr =  left + right, middle;
+	size_t lnr = left + right, middle;
+	size_t i = left;
 
-	if ( left > right)
+	printf("Searching in array: ");
+	for (; i <= right; i++)
+	{
+		if (i < size - 1)
+		{
+			printf("%d, ", array[i]);
+		}
+		else
+		{
+			printf("%d\n", array[i]);
+		}
+	}
+	if (left > right)
 		return (-1);
 
 	if (lnr % 2 == 0)
@@ -34,7 +47,7 @@ int search_engine(int *array, size_t size, int value, size_t left, size_t right)
 	else
 		middle = (lnr - 1) / 2;
 
-	if (array[middle] ==  value)
+	if (array[middle] == value)
 		return (middle);
 
 	else if (array[middle] < value)
