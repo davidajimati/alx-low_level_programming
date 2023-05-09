@@ -1,5 +1,6 @@
 #include "search_algos.h"
-int search_engine(int *array, size_t size, int value, size_t left, size_t right);
+int search_engine(int *array, size_t size, int value, size_t left,
+				  size_t right);
 
 /**
  * binary_search - searches for a value in a sorted array of
@@ -23,7 +24,8 @@ int binary_search(int *array, size_t size, int value)
 	return (search_engine(array, size, value, left, right));
 }
 
-int search_engine(int *array, size_t size, int value, size_t left, size_t right)
+int search_engine(int *array, size_t size, int value, size_t left,
+				  size_t right)
 {
 	size_t lnr = left + right, middle;
 	size_t i = left;
