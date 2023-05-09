@@ -1,5 +1,6 @@
 #include "search_algos.h"
 int search_engine(int *array, size_t size, int value, size_t left, size_t right);
+
 /**
  * binary_search - searches for a value in a sorted array of
  * integers using the Binary search algorithm
@@ -27,18 +28,6 @@ int search_engine(int *array, size_t size, int value, size_t left, size_t right)
 	size_t lnr = left + right, middle;
 	size_t i = left;
 
-	printf("Searching in array: ");
-	for (; i <= right; i++)
-	{
-		if (i < size - 1)
-		{
-			printf("%d, ", array[i]);
-		}
-		else
-		{
-			printf("%d\n", array[i]);
-		}
-	}
 	if (left > right)
 		return (-1);
 
@@ -47,10 +36,23 @@ int search_engine(int *array, size_t size, int value, size_t left, size_t right)
 	else
 		middle = (lnr - 1) / 2;
 
+	printf("Searching in array: ");
+	for (; i < size; i++)
+	{
+		if (i < right)
+		{
+			printf("%d, ", array[i]);
+		}
+		else if (i == right)
+		{
+			printf("%d\n", array[i]);
+		}
+	}
+
 	if (array[middle] == value)
 		return (middle);
 
-	else if (array[middle] < value)
+	if (array[middle] < value)
 		return (search_engine(array, size, value, middle + 1, right));
 	else
 		return (search_engine(array, size, value, left, middle - 1));
