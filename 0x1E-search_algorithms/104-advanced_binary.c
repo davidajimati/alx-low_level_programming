@@ -27,38 +27,19 @@ int advanced_binary(int *array, size_t size, int value)
 int search_engine(int *array, size_t size, int value, size_t left,
 				  size_t right)
 {
-	size_t lnr = left + right, middle;
-	size_t i = left;
-    size_t j;
+	size_t middle, i = left;
 
 	if (left > right)
 		return (-1);
 
-	if (lnr % 2 == 0)
-		middle = lnr / 2;
-	else
-		middle = (lnr - 1) / 2;
-
+	middle = left + (right - left) / 2;
 	printf("Searching in array: ");
-	for (; i < size; i++)
-	{
-		if (i < right)
-		{
-			printf("%d, ", array[i]);
-		}
-		else if (i == right)
-		{
-			printf("%d\n", array[i]);
-		}
-	}
+	for (; i < right; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 
-	if (array[middle] == value)
-    {
-        j = middle;
-        while (j < size && array[j] == value)
-            j++;
-		return (j);
-    }
+	if (array[middle] == value && array[middle + i] != value)
+		return (middle);
 
 	if (array[middle] < value)
 		return (search_engine(array, size, value, middle + 1, right));
